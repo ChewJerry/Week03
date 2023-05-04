@@ -4,9 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+
+//imported classes for use from line 16 to line 21
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
     TextView tvDisplay;
     Button btnDisplay;
     EditText etInput;
+
+    ToggleButton tBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) { //all codes here will be executed
@@ -23,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         tvDisplay = findViewById(R.id.textViewDisplay);
         btnDisplay = findViewById(R.id.buttonDisplay);
         etInput = findViewById(R.id.editTextInput);
+        tBtn = findViewById(R.id.toggleButton);
 
         btnDisplay.setOnClickListener(new View.OnClickListener() { //must be inside onCreate()
             @Override
@@ -35,6 +41,38 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
+
+        tBtn.setOnClickListener(new View.OnClickListener() { // toggle button
+            @Override
+            public void onClick(View view) {
+                // - Add code for the action
+
+                // - get the state of the toggle button
+                boolean isChecked = tBtn.isChecked();
+
+
+                // - when toggle button is unchecked, disable the EditText, editTextInput when the toggle button is unchecked
+                if (isChecked) {
+                    etInput.setEnabled(true);
+                }
+
+               // -	enable it when it is checked
+                else {
+                    etInput.setEnabled(false);
+                }
+
+
+
+
+
+
+
+
+            }
+        });
+
 
 
     }

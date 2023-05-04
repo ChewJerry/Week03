@@ -4,5 +4,9 @@
 
     <string name="text_view_hint">"Display what the user enters "</string>
     <string name="enter_something">Enter Something</string>
+    <string name="off">OFF</string>
+    <string name="on">ON</string>
+    <string name="disabled">Disabled</string>
+    <string name="enabled">Enabled</string>
 
 </resources>
