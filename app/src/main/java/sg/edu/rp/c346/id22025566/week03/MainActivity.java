@@ -18,9 +18,7 @@ public class MainActivity extends AppCompatActivity {
     TextView tvDisplay;
     Button btnDisplay;
     EditText etInput;
-
     ToggleButton tBtn;
-
     RadioGroup rgGender;
 
     @Override
